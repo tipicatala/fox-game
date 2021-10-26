@@ -1,8 +1,6 @@
-const TICK_RATE = 3000
+import gameState from './gameState'
 
-const tick = () => {
-  console.log("tick", Date.now())
-}
+const TICK_RATE = 3000
 
 const init = async () => {
   console.log('started game')
@@ -13,7 +11,7 @@ const init = async () => {
     const now = Date.now()
 
     if (tickTime <= now) {
-      tick()
+      gameState.tick()
 
       tickTime = now + TICK_RATE
     }
